@@ -1,0 +1,23 @@
+    <div id="featured" class="row margin-top-bottom">
+        <div class="col-md-12">
+            
+            <div id="featurecontainer">
+                <div id="featured-hero-image">
+    
+                {{widget('image', 'featureImage', {
+                  'src': asset("/images/feature-bg.jpg")
+                })|raw}}
+    
+                </div>
+                <div id="featured-hero-content" class="col-md-offset-1">
+                    {{widget('content', 'featuredHeroContent', {content: '<h3><span>Support Life,</span><br />
+    <span>Support King’s</span><br />
+    <span>and play our</span><br />
+    <span>Spring Raffle</span></h3>
+    <a class="btn btn-primary" id="prizes_section" href="#moneybuys">PLAY NOW!</a>'
+    })|raw}}
+                </div>
+            </div>
+        </div>
+    </div>
+

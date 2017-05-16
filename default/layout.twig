@@ -1,0 +1,24 @@
+<!doctype html>
+
+<html class="no-js" class="" lang="{{ page.seoLang }}">
+<!--<![endif]-->
+<head>
+    {% include "global/head.twig" %}
+
+    {% include basekit.headScript %}
+</head>
+
+<body id="{% block body_id %}{% endblock %}" class="{% block body_class %}{% endblock %}">
+<div class="wrapper ">
+
+{% block content %}
+{% endblock %}
+
+{% include basekit.bodyScript %}
+
+{% block scripts %}
+{% endblock %}
+
+</div> <!-- end wrapper -->
+</body>
+</html>
