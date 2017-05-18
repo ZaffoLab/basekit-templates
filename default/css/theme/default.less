@@ -1,6 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Lato');
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 
+@font-face {
+    font-family: ElegantIcons;
+    src: url(fonts/ElegantIcons.eot);
+    src: url(fonts/ElegantIcons-.eot#iefix) format("embedded-opentype"), url(fonts/ElegantIcons.woff) format("woff"), url(fonts/ElegantIcons.ttf) format("truetype"), url(fonts/ElegantIcons.svg#ElegantIcons) format("svg");
+    font-weight: 400;
+    font-style: normal;
+}
+
+
 html, body {
     background-color: @color__body--background;
 }
@@ -109,6 +118,35 @@ h1, h2, h3, h4, h5, p {
 
 #footer a {
     color: @font__footer--font-link-color;
+}
+
+#footer .icon {
+    font: 18px/20px ElegantIcons;
+    display: inline;
+}
+.icon span,
+#page-zones__template-widgets__content-footeremail,
+#page-zones__template-widgets__content-footerphone {
+    margin: 0 0 0 2em;
+    display: inline-block;
+    color:#8e9095;
+    font-family: @font__default--font-family;
+    color: @font__footer--font-color;
+    line-height: 1.7;
+    font-weight: @font__footer--font-weight;
+    font-size: @font__default--font-size;
+}
+
+#footer .phone-icon:before {
+    content: "\e090";
+}
+
+#footer .email-icon:before {
+    content: "\e076";
+}
+
+#footer #page-zones__template-widgets__logo-gmclogo {
+    margin: 1em 0;
 }
 
 #copyright p {
