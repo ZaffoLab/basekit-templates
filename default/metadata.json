@@ -5,10 +5,5 @@
     "templateType":"standard",
     "pageTypes":["home"],
     "logo":"images/logo.jpg",
-    "tags": { },
-    "styles": {
-        "site": {
-            "color__body--background": "#ffffff"
-        }
-    }
+    "tags": { }
 }
