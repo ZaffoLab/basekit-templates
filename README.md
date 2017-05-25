@@ -1,0 +1,2 @@
+# basekit-templates
+Abstract template
