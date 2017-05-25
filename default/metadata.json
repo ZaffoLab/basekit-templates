@@ -1,0 +1,9 @@
+{
+    "name":"Zaffo Default Template",
+    "thumbnail":"placeholder.png",
+    "screenshot":"placeholder.png",
+    "templateType":"standard",
+    "pageTypes":["home"],
+    "logo":"images/logo.jpg",
+    "tags": { }
+}

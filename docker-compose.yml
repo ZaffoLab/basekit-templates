@@ -1,0 +1,10 @@
+version: '2'
+services:
+  tdk:
+    image: basekit/tdk:latest
+    ports:
+         - "80:80"
+    volumes:
+      - .:/tdk/templates
+      - ~/.ssh/id_rsa:/root/.ssh/id_rsa
+    tty: true

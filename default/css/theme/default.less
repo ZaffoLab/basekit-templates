@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+@font-face {
+    font-family: ElegantIcons;
+    src: url('fonts/ElegantIcons.eot');
+    src: url('fonts/ElegantIcons-.eot#iefix') format("embedded-opentype"),
+        url('fonts/ElegantIcons.woff') format("woff"),
+        url('fonts/ElegantIcons.ttf') format("truetype"),
+        url('fonts/ElegantIcons.svg#ElegantIcons') format("svg");
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+html, body {
+    background-color: @color__body--background;
+}
+#prizes,  #footer, #copyright  { 
+    background-color: @color__body--background-secondary; 
+}
+
+h1, h2, h3, h4, h5, p {
+    margin: 10px 0;
+}
+
+#maincontent, 
+#maincontent p {
+    color: @font__default--text-color;
+    font-family: @font__default--font-family;
+    font-size: @font__default--font-size;
+}
+
+#maincontent a {
+    color: @font__default--link-color;
+}
+
+.navigation { padding-top: 25px; list-style: none;}
+.navigation li a { 
+    text-transform: @font__navigation--text-transform;
+    font-family: @font__navigation--font-family;
+    font-size: @font__navigation--font-size; // 14px
+    color: @font__navigation--font-color;
+}
+
+#featurecontainer {
+    overflow: hidden;
+}
+
+#featured-hero-content {
+    float: left;
+    margin-top: @position__feature--margin-top;
+}
+
+#featured-hero-content span {
+    font-size: @font__feature--font-size;
+    font-family: @font__feature--font-family;
+    color: @font__feature--text-color;
+    background-color: @font__feature--text-background;
+    border-radius: 6px; 
+    padding: 0px 15px 0px 15px;
+    line-height: 1.4em;
+}
+
+.btn-primary {
+    font-family: @font__feature-button--font-family;
+    color: @font__feature-button--text-color;
+    background-color: @font__feature-button--text-background;
+    border-color: @font__feature-button--border-color;
+}
+
+
+#aboutus h3 {
+    font-family: @font__aboutus--h3-font-family;
+    font-size: @font__aboutus--h3-font-size;
+    color: @font__aboutus--h3-font-color;
+    font-weight: @font__aboutus--h3-font-weight;
+    text-transform: @font__aboutus--h3-text-transform;
+}
+
+#aboutus p {
+    font-family: @font__aboutus--font-family;
+    color: @font__aboutus--font-color;
+    line-height: 1.7;
+    font-weight: @font__aboutus--font-weight;
+    font-size: @font__aboutus--font-size;
+}
+
+#prizes h3 {
+    font-family: @font__prizes--h3-font-family;
+    font-size: @font__prizes--h3-font-size;
+    color: @font__prizes--h3-font-color;
+    font-weight: @font__prizes--h3-font-weight;
+    text-transform: @font__prizes--h3-text-transform;
+}
+
+#prizes p {
+    font-family: @font__prizes--font-family;
+    color: @font__prizes--font-color;
+    line-height: 1.7;
+    font-weight: @font__prizes--font-weight;
+    font-size: @font__prizes--font-size;
+}
+
+#prizes .bk-content-text {
+    margin-left: 4em;
+}
+
+#footer h3 {
+    font-family: @font__footer--h3-font-family;
+    font-size: @font__footer--h3-font-size;
+    color: @font__footer--h3-font-color;
+    font-weight: @font__footer--h3-font-weight;
+    text-transform: @font__footer--h3-text-transform;
+}
+
+#footer p {
+    font-family: @font__footer--font-family;
+    color: @font__footer--font-color;
+    line-height: 1.7;
+    font-weight: @font__footer--font-weight;
+    font-size: @font__footer--font-size;
+}
+
+#footer a {
+    color: @font__footer--font-link-color;
+}
+
+#footer .icon,
+#footer .icon:before {
+    font: 18px/20px ElegantIcons;
+    display: inline;
+}
+.icon span,
+#page-zones__template-widgets__content-footeremail,
+#page-zones__template-widgets__content-footerphone {
+    margin: 0 0 0 2em;
+    display: inline-block;
+    color:#8e9095;
+    font-family: @font__default--font-family;
+    color: @font__footer--font-color;
+    line-height: 1.7;
+    font-weight: @font__footer--font-weight;
+    font-size: @font__default--font-size;
+}
+
+#footer .phone-icon:before {
+    content: "\e090";
+}
+
+#footer .email-icon:before {
+    content: "\e076";
+}
+
+#footer #page-zones__template-widgets__logo-gmclogo {
+    margin: 1em 0;
+}
+
+#copyright p {
+    font-family: @font__copyright--font-family;
+    color: @font__copyright--font-color;
+    line-height: 1.7;
+    font-weight: @font__copyright--font-weight;
+    font-size: @font__copyright--font-size;
+}
