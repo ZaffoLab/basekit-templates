@@ -1,0 +1,45 @@
+<!-- Header -->
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#efefef",
+      "text": "#404040"
+    },
+    "button": {
+      "background": "transparent",
+      "text": "#8ec760",
+      "border": "#8ec760"
+    }
+  },
+  "position": "bottom-right",
+  "content": {
+    "href": "/privacy-policy"
+  }
+})});
+</script>
+<header class="template-header">
+    <div class="header-wrapper bk-responsivecolumns  responsivecolumns  widget__responsivecolumns  js-responsivecolumns">
+        <div class="bk-zone column columns-four-first">
+            {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+        </div>
+        <div class="bk-zone column columns-four-second"></div>
+        <div class="bk-zone column columns-four-third"></div>
+                <div class="bk-zone column columns-four-fourth">
+                {{widget('content', 'navigationcontent', {
+                  content: '<span style="padding-right: 50px;"><a href="/#about">About Us</a></span>
+                  <span style="padding-right: 50px;"><a href="/#prizes">Prizes</a></span>
+                  <span style="padding-right: 50px;"><a href="/#play">Play Now</a></span>'
+                })|raw}}
+        </div>  
+
+    </div>
+</header>
+<!-- End Header -->

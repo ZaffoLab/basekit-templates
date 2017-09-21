@@ -1,0 +1,133 @@
+// -------------------------------------
+// Zaffo Pro: CSS > Plugin: Menu
+// -------------------------------------
+
+// Menu Navigation
+.widget__menusections {
+	border-bottom: 1px dashed @color-swatch7;
+	text-align: center;
+    @media @mobile {
+        display: none;
+    }
+}
+
+.menusections-list {
+    margin: 10px 0;
+}
+
+.menusections-item {
+    margin-right: 0;
+}
+
+.menusections-item:after {
+    content: "/";
+    font-size: 15px;
+    vertical-align: middle;
+    color: @color-swatch3;
+    margin-right: 0;
+    padding: 0 20px;
+    @media @mobile {
+        display:none;
+    }
+}
+
+.menusections-item:last-child:after {
+    display: none;
+}
+
+.menusections-item {
+    @media @mobile {
+        display: block;
+        margin-right: 0;
+        border-bottom: 1px dotted @color-swatch7;
+        padding: 10px 0px;
+    }
+}
+
+// Menu Content
+.widget__menu {
+	text-align:center;
+}
+
+.menu__item-header {
+    margin-top: 10px;
+}
+
+.menu-item {
+    display: block;
+}
+
+.item-content {
+    margin-top: 0;
+}
+
+.menu__section-header {
+    margin: 30px 0 20px;
+}
+
+.menu__section-title, 
+.menu__item-title, 
+.menu__item-subtitle {
+	    &:after {
+        border-top: 1px solid @color-swatch7;
+        content: "";
+        display: block;
+        position: relative;
+        margin: 20px auto 15px;
+        min-width: 60px;
+        max-width: 200px;
+        width: 5%;
+    }
+}
+
+.menu__item-subtitle {
+    font-style: italic;
+}
+
+.menu__dietary-item {
+	&:before {
+        content: "\f111";
+		font-size: 8px;
+		vertical-align: top;
+    }
+}
+
+// Item Image
+.item-image {
+	background-color: darken(@color-swatch1,5%);
+}
+
+
+// Featured Section
+
+.menu-section--featured {
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.menu-section--featured, 
+.menu-item--featured {
+    .menu__section-title:after, 
+    .menu__item-title:after, 
+    .menu__item-subtitle:after {
+        border-top: 1px solid @color-swatch7;
+        background-color: transparent;
+    }
+} 
+
+.menu-section--featured, 
+.menu-item--featured {
+    .menu__item-article {
+        border: 1px solid darken(@color-swatch7,2%);
+        padding: 20px;
+        background-color: transparent;
+    }
+}
+
+
+// Section Footer
+.menu__section-footer {
+    border: 1px solid @color-swatch7;
+    padding: 10px 10px 0px;
+    margin-bottom: 10px;
+}

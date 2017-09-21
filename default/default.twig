@@ -1,11 +1,84 @@
 {% extends "layout.twig" %}
-{% block body_id %}page-top{% endblock %}
-{% block body_class %}default{% endblock %}
+
 {% block content %}
 
-    {% include "section/header.twig" %}
-    {% include "section/maincontent.twig" %}
-    {% include "section/footer.twig" %}
-    {% include "section/copyright.twig" %}
+{% include "includes/header.twig" %}
+<div class="bk-pt-default">
+
+	<div class="page-title">
+		{{widget('pagetitle', 'title', {})|raw}}
+	</div>
+
+	<div class="container">
+		<section class="template-content">
+
+		   	{{zone('main')|raw}}
+
+		</section>
+	</div>
+
+</div>
+
+<!-- Container -->
+<div class="fullbg">
+    <div class="container">
+    	<!-- Page Content -->
+    	<section class="template-content">
+            <div class="bk-responsivecolumns  responsivecolumns  widget__responsivecolumns  js-responsivecolumns footertext">
+                <div class="bk-zone column columns-four-first">
+                    <h3><span style="color:white;">Contact Us</span></h3>
+                    <p<span style="color:white;">Need help? Don't hesitate to contact us</span></p>
+                    <p class="icon phone-icon">{{widget('content', 'footerphone', {content: '+44 (0203) 096 6265'})|raw}}</p>
+                    <p id="email" class="icon email-icon">{{widget('content', 'footeremail', {content: '<a href="mailto:support@zaffo.com"><span style="color:white;">support@zaffo.com</span></a>'})|raw}}</p>
+                    <h3><span style="color:white;">Extra Support</span><br />{{widget('image', 'gcmlogo', {'src': asset('/images/capen-gmc.png'),})|raw}}</h3>
+                    <p><span style="color:white;">Is problem gambling affecting you, or those close to you?</span></p>
+                    <p class="icon phone-icon"><span style="color:white;">Freephone: 0808 8020 133</span></p>
+                    <p><span style="color:white;">Please note that your payment has been processed by Capen Ltd Trading as Zaffo.com and your bank statement will include the following information “Zaffo.com-ZaffoCharity 0203 096 6265”</span></p>
+                </div>
+                
+                <div class="bk-zone column columns-four-second">
+                    <h3><span style="color:white;">Resources</span></h3>
+                    <p>
+                        <a href="/social-responsibility/" target="_blank" style="color:white">Social responsibility</a>
+                    </p>
+                    <p>
+                        <a href="/privacy-policy/" target="_blank" style="color:white">Privacy policy</a>
+                    </p>
+                    <p>
+                        <a  href="/terms-and-conditions/" target="_blank" style="color:white">Terms and conditions</a>
+                    </p>
+                    <p>
+                        <a href="/acceptable-use-policy/" target="_blank" style="color:white">Acceptable use policy</a>
+                    </p>
+                    <p>
+                        <a href="http://info.zaffo.com" target="_blank" style="color:white">Want a site like this?</a>
+                    </p>
+                    
+                </div>
+                
+                <div class="bk-zone column columns-four-third">
+                    <h3><span style="color:white;">Verified by</span></h3>
+                    <p><span style="color:white;">Verified by</span></p>
+                    <img src="https://winwithkings.zaffo.com/wp-content/themes/B2C_Zaffo_theme_money_buys_1_3_prizes_cash/assets/img/verified.png" alt="play">
+                    <p><span style="color:white;">Supporting you</span></p>
+                    <a href="http://www.gambleaware.co.uk/" target="_blank"><img src="https://winwithkings.zaffo.com/wp-content/themes/B2C_Zaffo_theme_money_buys_1_3_prizes_cash/assets/img/gamble-aware.png" alt="play"></a>
+                    <img src="https://winwithkings.zaffo.com/wp-content/themes/B2C_Zaffo_theme_money_buys_1_3_prizes_cash/assets/img/Powered_by_Zaffo.jpg" alt="Zaffo">
+                    
+                </div>
+                
+                <div class="bk-zone column columns-four-fourth">
+                    <h3><span style="color:white;">Third party</span></h3>
+                    <p><span style="color:white;">Accepted cards</span></p>
+                    <img src="https://winwithkings.zaffo.com/wp-content/themes/B2C_Zaffo_theme_money_buys_1_3_prizes_cash/assets/img/cards2.png" alt="play" />
+
+                    
+                </div>
+                
+            </div>    
+    	</section>
+    </div>
+</div>
+
+{% include "includes/footer.twig" %}
 
 {% endblock %}

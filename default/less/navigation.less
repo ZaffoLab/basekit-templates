@@ -1,0 +1,225 @@
+// -----------------------------
+// Zaffo Pro: CSS > Navigation
+// -----------------------------
+
+// Navigation Bar
+// --------------
+
+.navigation-bar {
+	background-color: @color-swatch2;
+}
+
+// Navigation List
+// ---------------
+
+.navigation-list {
+	min-width: 220px;
+	margin: 0;
+}
+
+
+// Default Page
+.default-page .navigation-list--children {
+	background-color: @color-swatch2;
+}
+
+// Navigation Item
+// ---------------
+
+.navigation-item {
+	@media @tablet {
+		width: 100%;
+        &:last-child {
+            border-bottom: 0;
+        }
+	}
+}
+
+// Navigation Link
+.navigation-item .item-name {
+	padding: 5px 15px;
+}
+
+.item-name {
+	padding: 16px 20px;
+    cursor: pointer;
+}
+
+
+// Dropdown Menu
+// -------------
+.navigation-item.folder {
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.navigation-item.folder .navigation__item-name {
+	&:hover {
+		color: @color__h4--text;
+	}
+}
+
+.item-name--parent {
+
+	&:after {
+		font-family: 'FontAwesome', sans-serif;
+		content: "\f107";
+		display: inline-block;
+		margin-left: 0.8em;
+		-webkit-transition: all 0.2s ease;
+		-moz-transition: all 0.2s ease;
+		-o-transition: all 0.2s ease;
+		transition: all 0.2s ease;
+        border-top-color: @color-swatch1;
+		@media @tablet {
+			content: "\f054";
+			font-size: 0.8em;
+			height: 33px;
+            margin-top: -11px;
+		}
+		.navigation-item.open & {
+			@media @tablet {
+				-webkit-transform: rotate(90deg);
+				-moz-transform: rotate(90deg);
+				-o-transform: rotate(90deg);
+				-ms-transform: rotate(90deg);
+				transform: rotate(90deg);
+			}
+		}
+	}
+}
+
+.navigation-list--children, .default-page .navigation-list--children {
+	background-color:@color-swatch1;
+	border: 1px solid @color-swatch7;
+    white-space: normal;
+	.navigation__item-name {
+		color:@color__feature-strapline--text;
+	}
+	@media @tablet {
+		position: relative;
+		top: 0;
+		.navigation-item:hover & {
+            display: block;
+			// display: none;
+		}
+		.navigation-item.open & {
+			display: block;
+		}
+	}
+}
+
+.navigation-list .navigation-item:last-child .navigation-list--children {
+   left: initial;
+   right: 0;
+}
+
+
+// Burger Icon
+// -------------
+
+.navigation-toggle {
+    display: none;
+}
+
+@media @tablet {
+    .navigation-toggle {
+        display: block;
+        overflow: hidden;
+        width: 100%;
+        height: 45px;
+        text-indent: -9999px;
+        line-height: 0;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+        outline: 0;
+        border: 0;
+        &:before {
+            content: '';
+            position: absolute;
+            width: 26px;
+            height: 3px;
+            top: 0;
+            left: 50%;
+            right: 0;
+            margin-top: 15px;
+            margin-left: -13px;
+            background: @color-swatch3;
+            box-shadow: 0 6px 0 @color-swatch3;
+            .transition( all, 0.5s, ease );
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            width: 26px;
+            height: 3px;
+            top: 12px;
+            left: 50%;
+            right: 0;
+            margin-top: 15px;
+            margin-left: -13px;
+            background: @color-swatch3;
+            .transition( all, 0.5s, ease );
+        }
+    }
+    .navigation-toggle:hover {
+        background-color: @color-swatch1;
+        border: 0;
+            &:before {
+                background: @color-swatch3;
+                box-shadow: 0 6px 0 @color-swatch3;
+            }
+            &:after {
+                background: @color-swatch3;
+            }
+    }
+    // Toggle Button Open State
+    .open & {
+        &.navigation-toggle {
+            background-color: @color-swatch1;
+            &:before {
+                margin-top: 21px;
+                background: @color-swatch3;
+                box-shadow: none;
+                -webkit-transform: rotate(45deg);
+                -moz-transform: rotate(45deg);
+                -o-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
+                .transition( all, 0.5s, ease );
+            }
+            &:after {
+                content: '';
+                position: absolute;
+                width: 26px;
+                height: 3px;
+                top: 0;
+                left: 50%;
+                right: 0;
+                margin-top: 21px;
+                margin-left: -13px;
+                background: @color-swatch3;
+                box-shadow: none;
+                -webkit-transform: rotate(-45deg);
+                -moz-transform: rotate(-45deg);
+                -o-transform: rotate(-45deg);
+                -ms-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+                .transition( all, 0.5s, ease );
+            }
+        }
+    }
+    .navigation-body {
+        display: none;
+        .open & {
+            display: block;
+            padding-top: 10px;
+            border-top: 1px solid darken(@color__body--background, 9%);
+            text-align: center;
+        }
+    }
+    .navigation-item {
+        width: 100%;
+    }
+}
+

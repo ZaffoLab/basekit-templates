@@ -1,14 +1,195 @@
 {% extends "layout.twig" %}
-{% block body_id %}page-top{% endblock %}
-{% block body_class %}home{% endblock %}
+
 {% block content %}
 
-    {% include "section/header.twig" %}
-    {% include "section/featured.twig" %}
-    {% include "section/aboutus.twig" %}
-    {% include "section/prizes.twig" %}
-    {% include "section/playnow.twig" %}
-    {% include "section/footer.twig" %}
-    {% include "section/copyright.twig" %}
+{% include "includes/header.twig" %}
+
+
+<div class="homepage-feature">
+	{{widget('feature', 'featurehome', {
+		"header": "YOUR PRIZE ATTENTION GRABBING CTA HERE",
+		"strapline": "A little bit about the ticket cost and or cause ",
+		"defaultBgImg": asset('/images/feature-bg.png'),
+		'positionTopPercentage': '0',
+		'showBtn': true,
+        'buttonText': 'Play Now',
+        'action': 'internal',
+        'url': '#play'
+	})|raw}}
+</div>
+
+
+{{widget('space', 'hero', {'height': '50'})|raw}}
+
+<!-- Container -->
+<div class="container" id="about">
+
+	<!-- Page Content -->
+	<section class="template-content">
+
+        <div class="bk-responsivecolumns  responsivecolumns  widget__responsivecolumns  js-responsivecolumns footertext">
+            <div class="bk-zone column columns-two-left">
+                {{widget('content', 'sectiontitle', {
+                  content: '<h1><b>ABOUT US</b></h1>'
+                })|raw}}
+                
+                {{widget('content', 'aboutcopy', {
+                  content: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacinia lorem sit amet felis volutpat molestie. Ut mi erat, commodo vitae neque non, mollis blandit lectus. Curabitur eu nunc eu dui condimentum molestie ac et justo. In turpis sapien, venenatis a odio ut, tincidunt hendrerit massa. Cras ut eleifend turpis.</p>'
+                })|raw}}
+                
+                {{widget('button', 'about', {
+                  'text': 'PLAY NOW!',
+                  "align": "widget-align-left",
+                  'action': 'Internal',
+                  'url': '#play',
+                })|raw}}
+                {{widget('space', 'about', {'height': '50'})|raw}}
+            </div>
+            
+            <div class="bk-zone column columns-two-right">
+                {{widget('image', 'aboutimage', {
+                    'src': asset('/images/about-image1.png'),
+                })|raw}}
+            </div>           
+        </div>    
+	</section>
+
+</div>
+
+{{widget('space', 'about', {'height': '50'})|raw}}
+
+<!-- End Container -->
+<div class="fullbg">
+    <div class="container" id="prizes">
+    	<section class="template-content">
     
+            <div class="bk-responsivecolumns  responsivecolumns  widget__responsivecolumns  js-responsivecolumns">
+                <div class="bk-zone column columns-two-left">
+                    {{widget('image', 'prizeimage', {
+                        'src': asset('/images/main_prize_image1.png'),
+                    })|raw}}
+                    {{widget('space', 'prize', {'height': '50'})|raw}}
+                </div>
+                <div class="bk-zone column columns-two-right" style="color:#ffffff;">
+                    {{widget('content', 'sectiontitle2', {
+                      content: '<h1><b><span style="color:#ffffff;">YOUR PRIZE TITLE HERE</span></b></h1>'
+                    })|raw}} 
+                    
+                    {{widget('content', 'prizecopy', {
+                      content: '<p><span style="color:#ffffff;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacinia lorem sit amet felis volutpat molestie. Ut mi erat, commodo vitae neque non, mollis blandit lectus. Curabitur eu nunc eu dui condimentum molestie ac et justo. In turpis sapien, venenatis a odio ut, tincidunt hendrerit massa. Cras ut eleifend turpis.</span></p>'
+                    })|raw}}
+                    {{widget('button', 'prize', {
+                      'text': 'PLAY NOW!',
+                      'align': 'widget-align-left',
+                      'action': 'Internal',
+                      'url': '#play',
+                    })|raw}}
+                </div>
+            </div>    
+    	</section>
+    </div>
+    {{widget('space', 'prizes', {'height': '50'})|raw}}
+</div>
+
+<!-- Container -->
+<div class="container" id="play">
+
+	<!-- Page Content -->
+	<section class="template-content">
+
+		<!-- Template Widgets -->
+		
+		<!-- End Template Widgets -->
+
+		<!-- Main Widet Zone -->
+		<div class="bk-zone column">
+    		 {{widget('content', 'sectiontitle3', {
+                content: '<center><h2><b>CHOOSE THE NUMBER OF TICKETS YOU WOULD LIKE</b></h2></center>',
+                'align': 'widget-align-center',
+             })|raw}}
+        </div>
+        <div class="bk-zone column">
+    		 {{widget('content', 'sectiontitlesub', {
+                content: '<center><b>The Raffle closes for entry on Friday XX of  XXX, the draw takes place on Friday XX of XXXX. Good luck!</b></center>'
+             })|raw}}
+        </div>
+		
+		
+	   	{{zone('main')|raw}}
+
+	</section>
+	<!-- End Page Content -->
+
+</div>
+<!-- End Container -->
+
+    {{widget('twitter', 'twitterfeed', {
+      'searchKey': 'ZaffoUK',
+      'searchType': 'username',
+      'count': '1',
+      'refreshTime': '1800000',
+      'includeRts': '0'
+    })|raw}}
+    
+<!-- Container -->
+<div class="fullbg">
+    <div class="container">
+    	<!-- Page Content -->
+    	<section class="template-content">
+            <div class="bk-responsivecolumns  responsivecolumns  widget__responsivecolumns  js-responsivecolumns footertext">
+                <div class="bk-zone column columns-four-first">
+                    <h3><span style="color:white;">Contact Us</span></h3>
+                    <p<span style="color:white;">Need help? Don't hesitate to contact us</span></p>
+                    <p class="icon phone-icon">{{widget('content', 'footerphone', {content: '+44 (0203) 096 6265'})|raw}}</p>
+                    <p id="email" class="icon email-icon">{{widget('content', 'footeremail', {content: '<a href="mailto:support@zaffo.com"><span style="color:white;">support@zaffo.com</span></a>'})|raw}}</p>
+                    <h3><span style="color:white;">Extra Support</span><br />{{widget('image', 'gcmlogo', {'src': asset('/images/gmc.png'),})|raw}}</h3>
+                    <p><span style="color:white;">Is problem gambling affecting you, or those close to you?</span></p>
+                    <p class="icon phone-icon"><span style="color:white;">Freephone: 0808 8020 133</span></p>
+                    <p><span style="color:white;">Please note that your payment has been processed by Capen Ltd Trading as Zaffo.com and your bank statement will include the following information “Zaffo.com-ZaffoCharity 0203 096 6265”</span></p>
+                </div>
+                
+                <div class="bk-zone column columns-four-second">
+                    <h3><span style="color:white;">Resources</span></h3>
+                    <p>
+                        <a href="/social-responsibility" target="_blank" style="color:white">Social responsibility</a>
+                    </p>
+                    <p>
+                        <a href="/privacy-policy" target="_blank" style="color:white">Privacy policy</a>
+                    </p>
+                    <p>
+                        <a  href="/terms-and-conditions" target="_blank" style="color:white">Terms and conditions</a>
+                    </p>
+                    <p>
+                        <a href="/acceptable-use-policy" target="_blank" style="color:white">Acceptable use policy</a>
+                    </p>
+                    <p>
+                        <a href="http://info.zaffo.com" target="_blank" style="color:white">Want a site like this?</a>
+                    </p>
+                    
+                </div>
+                
+                <div class="bk-zone column columns-four-third">
+                    <h3><span style="color:white;">Verified by</span></h3>
+                    <p><span style="color:white;">Verified by</span></p>
+                    {{widget('image', 'verified', {'src': asset('/images/verified.png'),})|raw}}
+                    <p><span style="color:white;">Supporting you</span></p>
+                    <a href="http://www.gambleaware.co.uk/" target="_blank">{{widget('image', 'gamble aware', {'src': asset('/images/gamble-aware.png'),})|raw}}</a>
+                    {{widget('image', 'powered by zaffo', {'src': asset('/images/Powered_by_Zaffo.jpg'),})|raw}}
+                    
+                </div>
+                
+                <div class="bk-zone column columns-four-fourth">
+                    <h3><span style="color:white;">Third party</span></h3>
+                    <p><span style="color:white;">Accepted cards</span></p>
+                    {{widget('image', 'powered by zaffo', {'src': asset('/images/cards2.png'),})|raw}}                    
+                </div>
+                
+            </div>    
+    	</section>
+    </div>
+</div>
+
+
+{% include "includes/footer.twig" %}
+
 {% endblock %}

@@ -1,24 +1,47 @@
 <!doctype html>
+<html class="no-js" lang="{{ page.seoLang }}">
 
-<html class="no-js" class="" lang="{{ page.seoLang }}">
-<!--<![endif]-->
 <head>
-    {% include "global/head.twig" %}
+	<meta charset="utf-8" />
+	<title>{{ page.title }}</title>
+	<meta name="keywords" content="{{ page.keywords }}" />
+	<meta name="description" content="{{ page.description }}" />
+	<meta http-equiv="content-language" content="{{ page.seoLang }}" />
 
-    {% include basekit.headScript %}
+	{% if site.favicon %}
+		<link rel="icon" href="{{ site.favicon['favicon'] }}" type="image/x-icon" />
+		<link rel="SHORTCUT ICON" href="{{ site.favicon['thumbnail'] }}?v={{ "now"|date("U") }}" type="image/x-icon" />
+	{% endif %}
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+
+	{% include basekit.headScript %}
 </head>
+<body class="{{ page.backgroundClass }}">
 
-<body id="{% block body_id %}{% endblock %}" class="{% block body_class %}{% endblock %}">
-<div class="wrapper ">
+	{% block content %}
+	{% endblock %}
 
-{% block content %}
-{% endblock %}
+    {% include basekit.bodyScript %}
 
-{% include basekit.bodyScript %}
 
-{% block scripts %}
-{% endblock %}
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="{{ asset('libs/jquery-1.10.2.min.js')}}"><\/script>')</script>
 
-</div> <!-- end wrapper -->
+    	<!-- Nav Menu Script -->
+        <script>
+            // Toggles class open to display/hide the whole navigation
+            $( ".navigation-toggle" ).click(function() {
+                $( ".bk-extendednavigation" ).toggleClass( "open" );
+            });
+            // Togglse class open to display/hide folders
+           // $( ".navigation-item.folder .item-name--parent" ).each(function() {
+           //      $( this ).click(function() {
+           //              $( this ).parent( ".navigation-item.folder" ).toggleClass( "open" );
+           //      });
+           //  });
+        </script>
+ <script src="{{ asset('js/affiliate.js')}}"></script>
+
 </body>
 </html>

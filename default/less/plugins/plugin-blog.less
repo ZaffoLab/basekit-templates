@@ -1,0 +1,164 @@
+// -------------------------------------
+// Zaffo Pro: CSS > Plugin: Blog
+// -------------------------------------
+
+// Blog Search
+.blogsearch__fieldset {
+    margin: 0px auto 10px;
+    display: table;
+    width: 70%;
+    text-align: center;
+}
+
+.blogsearch__form-body {
+    margin: 10px 0px 20px;
+}
+
+// Blog Post List
+.blogpostlist__post-header {
+    margin: 25px auto 0;
+}
+
+.post-content {
+	margin: 20px 0 20px;
+}
+
+.blogsearch__label {
+    display: none;
+}
+
+.blog-search__input {
+	margin: 0px auto;
+	display: table;
+}
+
+.blogpostlist__title-link,
+.blogpost__post-title {
+    &:after {
+        border-top: 1px solid @color-swatch7;
+        content: "";
+        display: block;
+        position: relative;
+        margin: 20px auto 5px;
+        min-width: 60px;
+        max-width: 200px;
+        width: 5%;
+    }
+}
+
+.blogpostlist__post-image,
+.blogpostlist__post-content {
+	text-align: center;
+    margin: 0px auto;
+}
+
+.blogpostlist .post-article {
+	@media @mobile {
+		padding:0;
+	}
+}
+
+.blogpostlist__post-article {
+    padding: 20px;
+}
+
+.blogpostlist__image {
+    display: inline-block;
+}
+
+.blogpostlist__image-link {
+    margin: 25px 25px 0;
+}
+
+.post-image .image {
+    max-height: 100%;
+}
+
+// Blog Post List Footer
+.blogpostlist__post-footer {
+    width: 100%;
+    padding: 25px;
+    text-align: center;
+    .timestamp {
+        display: inline-block;
+        padding: 20px;
+        margin: 0 auto;
+        border: 1px solid @color-swatch7;
+    }
+}
+
+// List and Single Post
+
+.blogpostlist,
+.blogpost {
+    .image-link {
+        text-align: center;
+    }
+}
+
+.post-body.blogpost__post-body,
+.blogpostlist__post-header,
+.blogpostlist__post-excerpt {
+    max-width: 700px;
+    padding: 0 25px;
+}
+
+.post-body.blogpost__post-body,
+.blogpostlist__post-excerpt {
+    margin: 0 auto;
+}
+
+// Blog Post List Pagination
+
+.blogpostlist__pagination-item {
+    display: inline-block;
+    width: 49%;
+}
+
+.blogpostlist__pagination-item:nth-child(2) {
+    text-align: right;
+    float: right;
+}
+
+// Blog Post
+
+.blogpost__post-content {
+	text-align: center;
+}
+
+
+.blogpost__post-attributes a,
+.blogpostlist__post-excerpt a {
+	color: lighten(@color__p--text,20%);
+}
+
+.blogpost__post-article {
+	padding:0;
+}
+
+.post-footer .timestamp {
+    margin: 0;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-color: @color-swatch7;
+}
+
+.blogpost__image {
+    margin: 0 auto;
+}
+
+// Blog Post List Footer
+.blogpost__post-footer {
+	border: 1px solid @color-swatch7;
+	padding: 30px 20px;
+	text-align: center;
+    max-width: 700px;
+    margin: 0px auto;
+}
+
+.blogpost__sharing-links {
+    margin-top: 15px;
+}

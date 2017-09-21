@@ -1,16 +1,150 @@
-@import "@{templateCommon}/bk-less-framework-v8.less";  // LESS Framework v8
-@import "@{templateLocal}/css/variables.less";
-@import "@{templateLocal}/css/theme/default.less";
+// --------------------------------
+// BaseKit Baseplate Theme (v1.0)
+// --------------------------------
 
-html, body { margin: 0; padding: 0; }
+// -----------------------------
+// #Table of Contents
+// -----------------------------
 
-.no-gutter {padding: 0;}
-.row { margin:0; }
+// 1. #LESS INCLUDES
+// 2. #PAGE SETTINGS
+// 3. #TEMPLATE STYLES
 
-.margin-top, .margin-top-bottom { margin-top: 3em; }
-.margin-bottom, .margin-top-bottom { margin-bottom: 3em; }
 
-.navigation li {
-    float:left;
-    padding: 1em 1em;
+
+
+// -----------------------------
+// 1. #LESS Includes
+// -----------------------------
+
+@import "@{templateCommon}/bk-less-framework-v8.less"; // BaseKit LESS Framework
+//@import "@{templateLocal}/bk-v8-test.less";
+@import "@{templateLocal}/less/variables.less";
+
+// Template Includes
+@import "@{templateLocal}/less/theme.less"; // Theme
+@import "@{templateLocal}/less/widgets.less"; // Widgets
+@import "@{templateLocal}/less/mixins.less"; // Mixins
+@import "@{templateLocal}/less/navigation.less"; // Navigation
+
+// Plugin Includes
+@import "@{templateLocal}/less/plugins/plugin-blog.less"; // Plugin: Blog CSS
+@import "@{templateLocal}/less/plugins/plugin-menu.less"; // Plugin: Menu CSS
+@import "@{templateLocal}/less/plugins/plugin-ecommerce.less"; // Plugin: Ecommerce CSS
+
+
+
+
+// -----------------------------
+// 2. #Page Settings **
+// -----------------------------
+
+
+// Page Container
+// --------------
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 2%;
+    padding-bottom: 20px;
+
+    @media @tablet {
+        padding: 4%;
+    }
+    @media @mobile {
+        padding: 3%;
+    }
+}
+
+
+// Header Wrapper
+// --------------
+
+.header-wrapper {
+	// Flex parent
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-direction: normal;
+	-moz-box-direction: normal;
+	-webkit-box-orient: horizontal;
+	-moz-box-orient: horizontal;
+	-webkit-flex-direction: row;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-box-pack: start;
+	-moz-box-pack: start;
+	-webkit-justify-content: flex-start;
+	-ms-flex-pack: start;
+	justify-content: flex-start;
+	-webkit-align-content: flex-start;
+	-ms-flex-line-pack: start;
+	align-content: flex-start;
+	-webkit-box-align: center;
+	-moz-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	width:100%;
+
+	// Layout
+	padding: 10px 2%;
+
+	@media @tablet {
+		display: block;
+		padding: 10px 5%;
+	}
+}
+
+
+// #Default Page Sticky Footer
+// ------------------------------------------
+
+.bk-pt-default {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+     -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    @media @tablet {
+        min-height: 100%;
+        display: block;
+    }
+}
+
+.bk-pt-default .container {
+    flex: 1;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    width: 100%;
+}
+
+
+
+
+// -----------------------------
+// 3. #Template Styles
+// -----------------------------
+
+.template-content {
+	width: 100%;
+	margin: 0px auto;
+	@media @tablet {
+		width:100%;
+	}
 }
